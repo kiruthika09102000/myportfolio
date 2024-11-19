@@ -185,6 +185,24 @@
     <div class="container">
         <div id="projectList">
 
+              <!-- E-Commerce Website Project Card -->
+            <div class="project-card">
+                <div class="project-info">
+                    <h2>E-Commerce Website</h2>
+                    <p>Nov 2024</p>
+                    <p>A dynamic E-Commerce Website with secure user authentication, an interactive shopping cart, payment integration, an admin panel, product catalog management, and seamless browsing.</p>
+                    <div class="skills-list">
+                        <span class="skill-box">Django Framework</span>
+                        <span class="skill-box">Bootstrap 5</span>
+                        <span class="skill-box">MySQL</span>
+                        <span class="skill-box">HTML</span>
+                        <span class="skill-box">CSS</span>
+                        <span class="skill-box">JavaScript</span>
+                    </div>
+                </div>
+                <button class="view-details-btn" onclick="showProjectDetails('eCommerceDetails')">View Project Details</button>
+            </div>
+
             <!-- Quest Tracker Project Card -->
             <div class="project-card">
                 <div class="project-info">
@@ -199,7 +217,22 @@
                 </div>
                 <button class="view-details-btn" onclick="showProjectDetails('questTrackerDetails')">View Project Details</button>
             </div>
+ <!-- Ad Hoc Project Card -->
+            <div class="project-card">
+                <div class="project-info">
+                    <h2>Ad-hoc expertise in Information Technology</h2>
+                    <p>May 2023</p>
+                    <p>The Ad-Hoc Project involves flexible, on-demand tasks and projects managed based on immediate organizational needs without a fixed schedule.</p>
 
+        <div class="skills-list">
+            <span class="skill-box">Python</span>
+            <span class="skill-box">CSS</span>
+            <span class="skill-box">JavaScript</span>
+            <span class="skill-box">MySQL</span>
+        </div>
+                </div>
+                <button class="view-details-btn" onclick="showProjectDetails('adHocDetails')">View Project Details</button>
+            </div>
             <!-- Sanitation Project Card -->
             <div class="project-card">
                 <div class="project-info">
@@ -217,24 +250,53 @@
                 <button class="view-details-btn" onclick="showProjectDetails('sanitationDetails')">View Project Details</button>
             </div>
 
-            <!-- Ad Hoc Project Card -->
-            <div class="project-card">
-                <div class="project-info">
-                    <h2>Ad-hoc expertise in Information Technology</h2>
-                    <p>May 2023</p>
-                    <p>The Ad-Hoc Project involves flexible, on-demand tasks and projects managed based on immediate organizational needs without a fixed schedule.</p>
 
-        <div class="skills-list">
-            <span class="skill-box">Python</span>
-            <span class="skill-box">CSS</span>
-            <span class="skill-box">JavaScript</span>
-            <span class="skill-box">MySQL</span>
         </div>
+ <!-- E-Commerce Website Project Details -->
+        <div id="eCommerceDetails" class="project-details">
+            <div class="details-header">
+                <h1>E-Commerce Website</h1>
+                <button class="back-btn" onclick="showProjectList()">Back to Projects</button>
+            </div>
+
+            <!-- Navigation Menu -->
+            <div class="nav-bar">
+                <button onclick="showContent('eCommerceOverview')">Overview</button>
+                <button onclick="showContent('eCommerceScope')">Scope of the Project</button>
+                <button onclick="showContent('eCommerceOutput')">Output</button>
+            </div>
+
+            <!-- Content Sections for E-Commerce -->
+            <div id="eCommerceOverview" class="content-section active">
+                <h2>Overview</h2>
+                <li>This project provides a feature-rich online shopping platform with a responsive design, user-friendly navigation, and robust backend management.</li>
+                <li>Users can browse products, add them to their cart, view their total cost, and save favorites for later.</li>
+                <li>An admin panel allows efficient management of products, categories, and orders to maintain seamless operations.</li>
+            </div>
+
+            <div id="eCommerceScope" class="content-section">
+                <h2>Scope of the Project</h2>
+                <li>To deliver a professional-grade online shopping platform with modern design principles and responsive layouts.</li>
+                <li>To provide secure and scalable solutions for user and product management, ensuring a smooth shopping experience.</li>
+                <li>To offer an intuitive admin interface for managing inventory, categories, and order details efficiently.</li>
+            </div>
+
+            <div id="eCommerceOutput" class="content-section">
+                <h2>Output</h2>
+                <div class="image-gallery">
+                    <div class="image-container">
+                        <img src="cet.png" alt="E-Commerce Image 1">
+                        <img src="ee.png" alt="E-Commerce Image 2">
+                        <img src="s.png" alt="E-Commerce Image 3">
+                    </div>
                 </div>
-                <button class="view-details-btn" onclick="showProjectDetails('adHocDetails')">View Project Details</button>
             </div>
         </div>
 
+        <!-- Other project details go here (Quest Tracker, Sanitation, Ad Hoc) -->
+
+    </div>
+</section>
         <!-- Quest Tracker Project Details -->
         <div id="questTrackerDetails" class="project-details">
             <div class="details-header">
@@ -277,7 +339,47 @@
                 </div>
             </div>
         </div>
+ <!-- Ad Hoc Project Details -->
+        <div id="adHocDetails" class="project-details">
+            <div class="details-header">
+                <h1>Ad-hoc expertise in Information Technology</h1>
+                <button class="back-btn" onclick="showProjectList()">Back to Projects</button>
+            </div>
 
+            <!-- Navigation Menu -->
+            <div class="nav-bar">
+                <button onclick="showContent('adHocOverview')">Overview</button>
+                <button onclick="showContent('adHocScope')">Scope of the Project</button>
+                <button onclick="showContent('adHocOutput')">Output</button>
+            </div>
+
+            <!-- Content Sections for Ad Hoc -->
+            <div id="adHocOverview" class="content-section active">
+                <h2>Overview</h2>
+                <li>The goal of the Improvisational Capability program is to foster innovative thinking, teamwork, and improved performance abilities, particularly among entrepreneurs.</li>
+                <li>The program integrates freelancing within IT services, recognizing the similarities and differences between freelancers and businesses in managing employees, culture, and projects.</li>
+                <li>Freelancers face challenges such as finding clients, maintaining them, and ensuring proper remuneration, requiring continuous effort and infrastructure investment for long-term success.</li>
+            </div>
+
+            <div id="adHocScope" class="content-section">
+                <h2>Scope of the Project</h2>
+                <li>The project aims to introduce improvisational capability to enhance innovative thinking and teamwork, specifically for entrepreneurs and IT professionals.</li>
+                <li>It explores the integration of freelancing within IT services, allowing businesses to choose between a freelancer or corporation model to meet specific client needs.</li>
+                <li>The project focuses on addressing the challenges freelancers face in finding and retaining clients, managing payments, and maintaining long-term success, especially in the IT industry.</li>
+                <li>It also incorporates machine learning, particularly the Naive Bayes algorithm, for classification tasks, applying data distribution models to improve decision-making in the IT services sector.</li>
+            </div>
+
+            <div id="adHocOutput" class="content-section">
+                <h2>Output</h2>
+                <div class="image-gallery">
+                    <div class="image-container">
+                        <img src="f.jpg" alt="Ad Hoc Image 1">
+                        <img src="e.jpg" alt="Ad Hoc Image 2">
+                        <img src="ee.jpg" alt="Ad Hoc Image 3">
+                    </div>
+                </div>
+            </div>
+        </div>
         <!-- Sanitation Project Details -->
         <div id="sanitationDetails" class="project-details">
             <div class="details-header">
@@ -321,47 +423,7 @@
             </div>
         </div>
 
-        <!-- Ad Hoc Project Details -->
-        <div id="adHocDetails" class="project-details">
-            <div class="details-header">
-                <h1>Ad-hoc expertise in Information Technology</h1>
-                <button class="back-btn" onclick="showProjectList()">Back to Projects</button>
-            </div>
 
-            <!-- Navigation Menu -->
-            <div class="nav-bar">
-                <button onclick="showContent('adHocOverview')">Overview</button>
-                <button onclick="showContent('adHocScope')">Scope of the Project</button>
-                <button onclick="showContent('adHocOutput')">Output</button>
-            </div>
-
-            <!-- Content Sections for Ad Hoc -->
-            <div id="adHocOverview" class="content-section active">
-                <h2>Overview</h2>
-                <li>The goal of the Improvisational Capability program is to foster innovative thinking, teamwork, and improved performance abilities, particularly among entrepreneurs.</li>
-                <li>The program integrates freelancing within IT services, recognizing the similarities and differences between freelancers and businesses in managing employees, culture, and projects.</li>
-                <li>Freelancers face challenges such as finding clients, maintaining them, and ensuring proper remuneration, requiring continuous effort and infrastructure investment for long-term success.</li>
-            </div>
-
-            <div id="adHocScope" class="content-section">
-                <h2>Scope of the Project</h2>
-                <li>The project aims to introduce improvisational capability to enhance innovative thinking and teamwork, specifically for entrepreneurs and IT professionals.</li>
-                <li>It explores the integration of freelancing within IT services, allowing businesses to choose between a freelancer or corporation model to meet specific client needs.</li>
-                <li>The project focuses on addressing the challenges freelancers face in finding and retaining clients, managing payments, and maintaining long-term success, especially in the IT industry.</li>
-                <li>It also incorporates machine learning, particularly the Naive Bayes algorithm, for classification tasks, applying data distribution models to improve decision-making in the IT services sector.</li>
-            </div>
-
-            <div id="adHocOutput" class="content-section">
-                <h2>Output</h2>
-                <div class="image-gallery">
-                    <div class="image-container">
-                        <img src="f.jpg" alt="Ad Hoc Image 1">
-                        <img src="e.jpg" alt="Ad Hoc Image 2">
-                        <img src="ee.jpg" alt="Ad Hoc Image 3">
-                    </div>
-                </div>
-            </div>
-        </div>
     </div>
 </section>
 
