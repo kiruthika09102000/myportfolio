@@ -4,45 +4,30 @@ body{
     font-weight: 400;
 }
 
-/* styling menu icon */
-.nav-menu{
-    border: none;
-    background-color: #fff;
-    font-size: 5rem;
-    color: #fca61f;
-}
-/* styling navbar links  */
-.navbar-nav a{
+ .navbar-nav {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  /* Navbar link styling */
+  .navbar-nav .nav-link {
+    font-size: 1.1rem;
     color: black;
-    position: relative;
-}
-.navbar-nav a:hover{
+  }
+
+  .navbar-nav .nav-link:hover {
     color: #fca61f;
-}
-.navbar-nav a:after {
-    background: none repeat scroll 0 0 transparent;
-    bottom: 0;
-    content: "";
-    display: block;
-    height: 2px;
-    left: 50%;
-    top: 35px;
-    position: absolute;
-    background: #fca61f;
-    transition: width 0.3s ease 0s, left 0.3s ease 0s;
-    width: 0;
   }
-.navbar-nav a:hover:after {
-    width: 100%;
-    left: 0;
-  }
-  /* styling contact btn  */
-.c-btn{
-    border: none;
-    background: #fca61f;
-    color: #fff;
+
+  /* Contact button style */
+  .c-btn {
+    background-color: #fca61f;
+    color: white;
     font-size: 1.2rem;
-}
+    padding: 10px 20px;
+    text-decoration: none;
+  }
 
 .home {
     background: linear-gradient(33deg, rgba(242,242,255,1) 0%, rgba(235,249,255,1) 100%);
@@ -88,7 +73,45 @@ span b:hover {
     font-size: 1.5em;
     margin-bottom: 10px;
 }
+/* Mobile and Small Screens - Media Query */
+@media (max-width: 768px) {
+    .home {
+        padding: 20px; /* Add padding on small screens */
+        height: auto; /* Remove full height for mobile screens */
+    }
 
+    .home-text h1 {
+        font-size: 2.5em; /* Smaller font size for mobile */
+        padding: 5px 15px; /* Adjust padding around heading */
+    }
+
+    span b {
+        font-size: 1.5em; /* Adjust the font size of b tags */
+    }
+
+    .home-text span {
+        font-size: 1.2em; /* Slightly smaller font for span */
+    }
+}
+
+@media (max-width: 480px) {
+    .home {
+        padding: 10px; /* Further reduce padding on very small screens */
+    }
+
+    .home-text h1 {
+        font-size: 2em; /* Reduce font size even more */
+        padding: 5px 10px; /* Adjust padding for very small screens */
+    }
+
+    span b {
+        font-size: 1.2em; /* Reduce font size of b tags */
+    }
+
+    .home-text span {
+        font-size: 1em; /* Adjust font size for very small screens */
+    }
+}
 
 
 /* Container for the paragraph with effects */
@@ -115,8 +138,27 @@ span b:hover {
         transform: translateX(0); /* Ends in the original position */
     }
 }
+/* Mobile and Small Screens - Media Query */
+@media (max-width: 768px) {
+    .text-container {
+        font-size: 0.9em; /* Smaller font size for better mobile readability */
+        padding: 60px; /* Larger padding for bigger container */
+    }
+}
 
+@media (max-width: 480px) {
+    .text-container {
+        font-size: 0.8em; /* Even smaller font size for very small screens */
+        padding: 55px; /* Keep the container large but reduce padding slightly */
+    }
+}
 
+@media (max-width: 360px) {
+    .text-container {
+        font-size: 0.7em; /* Further reduce font size for extra small screens */
+        padding: 50px; /* Keep the container big with consistent padding */
+    }
+}
 /* Social Links Styling */
 .social-links {
     display: flex;
@@ -244,7 +286,33 @@ span b:hover {
     background: #00599C; /* C/C++ color */
 }
 
+/* Mobile and Small Screens - Media Query */
+@media (max-width: 768px) {
+    .skills {
+        padding: 100px 50px; /* Adjust padding for smaller screens */
+    }
 
+    .bars-box {
+        width: 45%; /* Decrease width for smaller screens */
+        padding: 15px; /* Reduce padding */
+    }
+}
+
+@media (max-width: 480px) {
+    .skills {
+        padding: 80px 30px; /* Further reduce padding for very small screens */
+    }
+
+    .bars-box {
+        width: 100%; /* Make each skill bar box take full width on smaller screens */
+        margin-bottom: 20px; /* Add more space between boxes */
+        padding: 10px; /* Further reduce padding */
+    }
+
+    .bars {
+        justify-content: center; /* Center the skill bars on very small screens */
+    }
+}
 
 /* Projects Section Styling */
 .container {
@@ -466,41 +534,52 @@ span b:hover {
     transform: scale(1.05);  /* Slight zoom effect when hovering */
 }
 
-/* Responsive Adjustments */
-@media (max-width: 768px) {
-    .image-container {
-        flex: 1 1 calc(50% - 20px);  /* Two images per row on medium screens */
+/* Media Query for Mobile (Phones) */
+@media (max-width: 800px) {
+    /* Container */
+    .container {
+        padding: 40px 20px; /* Reduce padding for smaller screens */
     }
-}
 
-@media (max-width: 480px) {
-    .image-container {
-        flex: 1 1 100%;  /* One image per row on small screens */
-    }
-}
-
-/* Responsive Adjustments */
-@media (max-width: 768px) {
+    /* Project Card */
     .project-card {
-        flex-direction: column;
-        align-items: flex-start;
+        flex-direction: column; /* Stack items vertically */
+        margin-bottom: 15px; /* Add space between cards */
     }
 
-    .view-details-btn {
-        padding: 8px 15px;
+    /* Skills List */
+    .skills-list {
+        gap: 10px; /* Space between skills */
+        justify-content: center; /* Center align skills */
     }
 
-    .nav-bar {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .image-container {
-        width: 100%;
-    }
-
+    /* Project Details */
     .project-details {
-        padding: 40px 60px; /* Adjust padding for smaller screens */
+        padding: 120px 20px; /* Adjust padding for smaller screens */
+        max-width: 90%; /* Make the project details card take more width */
+    }
+
+    /* View Details Button */
+    .view-details-btn {
+        font-size: 1em; /* Keep button text size readable */
+        padding: 12px 24px; /* Adjust padding */
+    }
+
+    /* Image Gallery */
+    .image-gallery {
+        flex-direction: column; /* Stack images vertically */
+        align-items: center; /* Center images */
+    }
+
+    /* Image Container */
+    .image-container {
+        flex: 1 1 100%;  /* Images take full width */
+        margin-bottom: 15px; /* Add space between images */
+    }
+
+    /* Image Hover Effect */
+    .image-container:hover {
+        transform: scale(1);  /* Remove hover scale effect */
     }
 }
 
@@ -550,6 +629,43 @@ span b:hover {
     transform: scale(1.1); /* Zoom effect on hover */
 }
 
+/* Media Query for Mobile (Phones) */
+@media (max-width: 768px) {
+    /* Achievements Section */
+    .achievements {
+        padding: 40px 20px; /* Adjust padding for smaller screens */
+        min-height: auto; /* Remove min-height to prevent excess space */
+    }
+
+    /* Achievements Content */
+    .achievements-content {
+        width: 100%; /* Ensure the content takes up full width */
+        flex-direction: column; /* Stack the images vertically */
+        gap: 20px; /* Reduce gap between images */
+    }
+
+    /* Achievements Image Container */
+    .achievements-img {
+        flex: 1 1 100%; /* Make images take full width */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #fff;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    }
+
+    /* Image Styling */
+    .achievements-img img {
+        width: 100%; /* Make images take full width of the container */
+        height: auto; /* Maintain aspect ratio */
+        border-radius: 8px;
+    }
+
+    /* Optional: Image hover effect */
+    .achievements-img:hover img {
+        transform: scale(1); /* Remove zoom effect on hover */
+    }
+}
 
 /* Container for Contact Name to Center It */
 .contact-name-container {
